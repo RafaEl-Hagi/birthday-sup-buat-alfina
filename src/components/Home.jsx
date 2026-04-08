@@ -1,25 +1,22 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
-    const [visibleCount, setVisibleCount] = useState(1)
-    const navigate = useNavigate()
-    const sentences = [
-    "Hi John Doe",
-    "I have something to show you:)"
-  ]
+  const [visibleCount, setVisibleCount] = useState(1);
+  const navigate = useNavigate();
+  const sentences = ["hii alfina zahra", "i've something to show you :P"];
 
   const handleClick = () => {
     if (visibleCount < sentences.length) {
-      setVisibleCount(visibleCount + 1)
+      setVisibleCount(visibleCount + 1);
     } else {
-      navigate('/pictures')
+      navigate("/pictures");
     }
-  }
+  };
   return (
-    <div 
-      className="flex flex-col min-h-screen  cursor-pointer w-full items-center justify-center over-flow-clip" 
+    <div
+      className="flex flex-col min-h-screen  cursor-pointer w-full items-center justify-center over-flow-clip"
       onClick={handleClick}
     >
       <div className="w-[90%] max-w-[400px] px-8">
@@ -36,7 +33,7 @@ function Home() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

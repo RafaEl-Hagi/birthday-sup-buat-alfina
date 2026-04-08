@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { picture} from '../assets';
-import { Link } from 'react-router-dom'; 
-import SectionWrapper from './SectionWrapper';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { picture } from "../assets";
+import { Link } from "react-router-dom";
+import SectionWrapper from "./SectionWrapper";
 // Add your own images by putting them in the assets folder and import them.
-const images = [
- picture,
- picture,
- picture,
- picture,
-
-];
+const images = [picture, picture, picture, picture];
 function Picture() {
   const [loadedImages, setLoadedImages] = useState(0);
 
@@ -22,7 +16,7 @@ function Picture() {
     <SectionWrapper>
       <Link to="/card">
         <p className="absolute text-4xl font-bold text-customBlue inset-0 flex justify-center items-center text-center transform rotate-6 cursor-pointer">
-          You're Getting Old! :P
+          woww nambah 1 tahyunn! :P
         </p>
       </Link>
       {!allImagesLoaded && (
@@ -34,7 +28,7 @@ function Picture() {
         <motion.div
           key={index}
           className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
-            allImagesLoaded ? 'opacity-100' : 'opacity-0'
+            allImagesLoaded ? "opacity-100" : "opacity-0"
           }`}
           style={{
             zIndex: images.length - index,
